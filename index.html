@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+			crossorigin="anonymous"
+		/>
+
+		<title>NPZ! 피부유형테스트</title>
+		<link rel="stylesheet" href="style.css" />
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<script
+			type="text/javascript"
+			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60879893d37cdc1a"
+		></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">NPZ</a>
+				<!-- <button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">피부유형 테스트</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="type.html">Type</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="care.html">Care</a>
+						</li>
+						
+					</ul>
+				</div> -->
+			</div>
+		</nav>
+		<section class="section">
+			<h1 class="title">인공지능 피부 유형 테스트</h1>
+			<h2 class="subtitle">나의 피부는 어떤 상태일까?</h2>
+		</section>
+		<!-- <section class="youtube">
+			<div class="container mt-5 youtube-cover d-flex flex-row-reverse">
+				<img src="img/youtube-copy.jpg" alt="" class="youtube-icon" />
+				<a href="" class="youtube-link">뿌잉뿌잉뿌잉</a>
+			</div>
+		</section> -->
+		 <h3 class="mt-1 pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여자</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남자</p>
+    </section>
+		
+		
+		<script
+			class="jsbin"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<div class="mt-3 container file-upload">
+			<div class="image-upload-wrap">
+				<input
+					class="file-upload-input"
+					type="file"
+					onchange="readURL(this);"
+					accept="image/*"
+				/>
+				<div class="drag-text">
+					<img src="img/upload.svg" class="mt-5 pt-5 upload" />
+					<h3 class="mb-5 pb-5 pt-4 upload-text">사진을 올려주세요!</h3>
+				</div>
+			</div>
+			<div class="file-upload-content">
+				<img class="file-upload-image" id="skin-image" src="#" alt="your image" />
+				<div id="loading" class="animated bounce">
+					<div class="spinner-border" role="status">
+						<span class="sr-only">Loading...</span>
+					</div>
+					<p class="text-center">AI가 당신의 피부 유형을 분석중입니다....</p>
+				</div>
+
+				<p class="result-message"></p>
+				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
+				<div class="addthis_inline_share_toolbox"></div>
+
+				<div class="pt-3 image-title-wrap">
+					<button
+						type="button p-2"
+						class="try-again-btn"
+						onclick="window.location.reload();"
+					>
+						<span class="try-again-text">다른 사진으로 재시도</span>
+					</button>
+				</div>
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+			</div>
+		</div>
+		<footer class="footer pt-5 container d-flex justify-content-center">
+			<div>
+				<p>&copy; 김범식, 박재홍, 하재현 (2021).</p>
+			</div>
+		</footer>
+
+		<div id="label-container"></div>
+		<div id="disqus_thread"></div>
+		<script>
+			/**
+			 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+			/*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+			(function () {
+				// DON'T EDIT BELOW THIS LINE
+				var d = document,
+					s = d.createElement('script');
+				s.src = 'https://skin-3.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript
+			>Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+		>
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+			integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+		<script>
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						$('.image-upload-wrap').hide();
+						$('#loading').show();
+						$('.file-upload-image').attr('src', e.target.result);
+						$('.file-upload-content').show();
+
+						$('.image-title').html(input.files[0].name);
+					};
+
+					reader.readAsDataURL(input.files[0]);
+					init().then(function () {
+						console.log('hello');
+						predict();
+						$('#loading').hide();
+					});
+				} else {
+					removeUpload();
+				}
+			}
+
+			function removeUpload() {
+				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+				$('.file-upload-content').hide();
+				$('.image-upload-wrap').show();
+			}
+			$('.image-upload-wrap').bind('dragover', function () {
+				$('.image-upload-wrap').addClass('image-dropping');
+			});
+			$('.image-upload-wrap').bind('dragleave', function () {
+				$('.image-upload-wrap').removeClass('image-dropping');
+			});
+		</script>
+		<script type="text/javascript">
+			// More API functions here:
+			// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+			// the link to your model provided by Teachable Machine export panel
+			const URL = 'https://teachablemachine.withgoogle.com/models/nsJt9rDO_/';
+
+			let model, webcam, labelContainer, maxPredictions;
+
+			// Load the image model and setup the webcam
+			async function init() {
+				const modelURL = URL + 'model.json';
+				const metadataURL = URL + 'metadata.json';
+
+				// load the model and metadata
+				// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+				// or files from your local hard drive
+				// Note: the pose library adds "tmImage" object to your window (window.tmImage)
+				model = await tmImage.load(modelURL, metadataURL);
+				maxPredictions = model.getTotalClasses();
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					// and class labels
+					labelContainer.appendChild(document.createElement('div'));
+				}
+			}
+
+			// run the webcam image through the image model
+			async function predict() {
+				// predict can take in an image, video or canvas html element
+				var image = document.getElementById('skin-image');
+				const prediction = await model.predict(image, false);
+				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+				console.log(prediction[0].className);
+				var resultTitle, resultExplain, resultCeleb;
+				switch (prediction[0].className) {
+					case 'Type1':
+						resultTitle = '비화농성 - 화이트헤드(좁쌀여드름)';
+						resultExplain = '일명 좁쌀여드름이라고 불리죠. 대부분 턱이나 이마 미간 쪽에 발생되며 산화되지 않은 상태로 모공의 입구가 막혀있어요 여드름으로 발전할 가능성이 있는 면포이기도 하죠. 유분기뿐만 아니라 화장이나 파운데이션, 유분감 있는 선크림 등을 사용했을 때 사용하는 경우가 있어요. 화이트헤드를 보기 싫다고 니들(주사바늘)로 제거하시는 분들도 계신데 잘못했다간 흉터가 남을 수 있으니 자연스럽게 빠질 때까지 기다리시는 게 좋아요.';
+						resultCeleb = '필링이나 각질제거 제품을 사용해주시던가. 스팀으로 모공을 열어 스크러버 등으로 제거해주시는 게 좋아요';
+						break;
+					case 'Type2':
+						resultTitle = '비화농성 - 블랙헤드';
+						resultExplain = '우리 코에 가장많이 보이죠~! 공기와 접하면서 산화되며 까맣게 되는거에요. 블랙헤드는 염증을 일으키진 않는데 그래도 거뭇거뭇한 코가 보기에 좋진 않잖아요.. 제거하겠다고 무리하게 면봉으로 짜내던가. 코메도를 사용해 압출해내면 코에 있는 혈관이 확장이되고 딸기코가 될 수 있어요! ';
+						resultCeleb = '각질제거나 피지제거제를 이용해 스크러버로 빼내시는게 좋고, 따뜻한물로 세안해 모공을 열어준뒤 클렌져오일을 타올에 묻혀서 살살 밀어내셔도 블랙헤드는 쉽게 빠집니다';
+						break;
+					case 'Type3':
+						resultTitle = '화농성 - 구진성 여드름';
+						resultExplain = '여드름의 면포형성단계로 문제성피부로 될 수 있는 구진(Papule) 선홍색으로 피부 주변이 불긋불긋해 보이며 모공이 안보이는게 특징이에요. 우리 몸에 세균이 들어오면 가렵거나 열감이 올라오거나 따끔거릴 수 있죠? 그런 증상도 함께 일어나요. 이 상태에서 무리하게 압출하다보면 2차,3차 감염이 될 수 있고, 피부조직이 손상될 수 있기 때문에 절대 압출하지 않는게 좋아요! ';
+						resultCeleb = '피부를 진정시켜주는게 좋은데 스팟젤이나 여드름전용겔을 발라주시고 수딩겔 등으로 피부의 온도를 내려주시는게 좋아요 레이져 치료로는 아큐토닝이나 크라이오셀 기기관리 등을 사용하는게 좋습니다! ';
+						break;
+					case 'Type4':
+						resultTitle = '화농성 - 농포성 여드름';
+						resultExplain = '화이트헤드가 구진(Papule)이나 농포 (pustule)로 발전이 되는데 농포는 그나마 위에 노란 농이 보이기 때문에 그부분만 살짝 걷어내주시면되요 그리고 구진보다 붓기가 가라앉아있다는 특징이 있어요. 즉, 세균이 백혈구와 싸워 죽은아이들이 올라온게 농포인데요 농을 제거했다고 여드름이 사라지는건아니에요. 약간 가렵고 따가운 자각증사는 구진보다는 완화되겠지만압출을 잘못할경우 진피층까지 섬유아세포 조직이 파괴되 흉터가 남을 수 있어요. ';
+						resultCeleb = '마찰이 많이 안가는게 좋으며, 손에 세균이 많기때문에 최대한 접촉은 피해주시고 올라온 농만 제거하고 얼굴의 열감을 떨어트려줘야해요. 그래야 염증유발되는것도 막고 그 다음 현상으로 발전되는걸 막을 수 있어요. 수딩젤과 크라이오셀로 진정을 시켜주기도 하고 여드름 압출할때는 스티머를 사용해 모공을 열어준다음 농을 제거하는게 좋습니다 ';
+						break;
+					default:
+						resultTitle = '알수없음';
+						resultExplain = '';
+						resultCeleb = '';
+				}
+				var title = "<div class='" + prediction[0].className + "-skin-title'>" + resultTitle + '</div>';
+				var explain = "<div class='skin-explain pt-2'>" + resultExplain + '</div>';
+				var celeb = "<div class='" + prediction[0].className + "-skin-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+				$('.result-message').html(title + explain + celeb);
+				var barWidth;
+				for (let i = 0; i < maxPredictions; i++) {
+					if (prediction[i].probability.toFixed(2) > 0.1) {
+						barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+					} else if (prediction[i].probability.toFixed(2) >= 0.01) {
+						barWidth = '4%';
+					} else {
+						barWidth = '2%';
+					}
+					var labelTitle;
+					switch (prediction[i].className) {
+						case 'Type1':
+							labelTitle = '비화농성 - 화이트헤드(좁쌀여드름)';
+							break;
+						case 'Type2':
+							labelTitle = '비화농성 - 블랙헤드';
+							break;
+						case 'Type3':
+							labelTitle = '화농성 - 구진성 여드름';
+							break;
+						case 'Type4':
+							labelTitle = '화농성 - 농포성 여드름';
+							break;
+
+						default:
+							labelTitle = '알수없음';
+					}
+					var label = "<div class='skin-label d-flex align-items-center'>" + labelTitle + '</div>';
+					var bar = "<div class='bar-container position-relative container'><div class='" +
+						prediction[i].className +
+						"-box'></div><div class='d-flex justify-content-center align-items-center " +
+						prediction[i].className +
+						"-bar' style='width: " +
+						barWidth +
+						"'><span class='d-block percent-text'>" +
+						Math.round(prediction[i].probability.toFixed(2) * 100) +
+						'%</span></div></div>';
+					labelContainer.childNodes[i].innerHTML = label + bar;
+				}
+			}
+		</script>
+	</body>
+	<!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>
